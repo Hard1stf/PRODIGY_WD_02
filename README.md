@@ -24,15 +24,8 @@ This project is a responsive stopwatch web application built using HTML5, CSS3, 
 4. **Record Lap Time**: Click the "Lap" button to record the current time as a lap.
 
 ## Screenshots
-![Stopwatch Screenshot](screenshot.png)
-
-## Contributing
-If you would like to contribute to this project, please fork the repository and submit a pull request.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+![Stopwatch Screenshot](./source/Screenshot%202024-06-01%20171907.png)
 
 ## Acknowledgements
 - The design is inspired by modern web applications with an emphasis on simplicity and interactivity.
-- Special thanks to the developers who contributed to the tools and libraries used in this project.
 
