@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.background-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%), radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 70%), radial-gradient(circle, rgba(255, 255, 255, 0.05) 20%, transparent 70%);
+    background-size: 200% 200%;
+    animation: moveBlobs 20s infinite linear;
+    filter: blur(50px);
+    transition: filter 1s;
+}
+
+@keyframes moveBlobs {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.stopwatch {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.heading {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    transition: color 1s;
+}
+
+.display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.laps {
+    margin-top: 20px;
+}
+
+.laps div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .stopwatch {
+        padding: 15px;
+    }
+    .display {
+        font-size: 1.5em;
+    }
+    .buttons button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
